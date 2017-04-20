@@ -1,0 +1,3226 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://bigpipe.io"
+
+    >bigpipe (v0.9.14)</a>
+</h1>
+<h4>Bigpipe a radical new web framework for Node.js that's inspired by Facebook's bigpipe concept.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bigpipe">module bigpipe</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.bigpipe">
+            function <span class="apidocSignatureSpan"></span>bigpipe
+            <span class="apidocSignatureSpan">(server, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection">
+            function <span class="apidocSignatureSpan">bigpipe.</span>collection
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler">
+            function <span class="apidocSignatureSpan">bigpipe.</span>compiler
+            <span class="apidocSignatureSpan">(directory, pipe, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.createServer">
+            function <span class="apidocSignatureSpan">bigpipe.</span>createServer
+            <span class="apidocSignatureSpan">(port, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.extend">
+            function <span class="apidocSignatureSpan">bigpipe.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file">
+            function <span class="apidocSignatureSpan">bigpipe.</span>file
+            <span class="apidocSignatureSpan">(filepath, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.get">
+            function <span class="apidocSignatureSpan">bigpipe.</span>get
+            <span class="apidocSignatureSpan">(method, getter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine">
+            function <span class="apidocSignatureSpan">bigpipe.</span>predefine
+            <span class="apidocSignatureSpan">(obj, pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.readable">
+            function <span class="apidocSignatureSpan">bigpipe.</span>readable
+            <span class="apidocSignatureSpan">(method, description, clean)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.set">
+            function <span class="apidocSignatureSpan">bigpipe.</span>set
+            <span class="apidocSignatureSpan">(method, getter, setter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.writable">
+            function <span class="apidocSignatureSpan">bigpipe.</span>writable
+            <span class="apidocSignatureSpan">(method, description, clean)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bigpipe.</span>compiler.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bigpipe.collection">module bigpipe.collection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection.collection">
+            function <span class="apidocSignatureSpan">bigpipe.</span>collection
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection.extend">
+            function <span class="apidocSignatureSpan">bigpipe.collection.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection.get">
+            function <span class="apidocSignatureSpan">bigpipe.collection.</span>get
+            <span class="apidocSignatureSpan">(method, getter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection.predefine">
+            function <span class="apidocSignatureSpan">bigpipe.collection.</span>predefine
+            <span class="apidocSignatureSpan">(obj, pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection.readable">
+            function <span class="apidocSignatureSpan">bigpipe.collection.</span>readable
+            <span class="apidocSignatureSpan">(method, description, clean)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection.set">
+            function <span class="apidocSignatureSpan">bigpipe.collection.</span>set
+            <span class="apidocSignatureSpan">(method, getter, setter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.collection.writable">
+            function <span class="apidocSignatureSpan">bigpipe.collection.</span>writable
+            <span class="apidocSignatureSpan">(method, description, clean)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bigpipe.compiler">module bigpipe.compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.compiler">
+            function <span class="apidocSignatureSpan">bigpipe.</span>compiler
+            <span class="apidocSignatureSpan">(directory, pipe, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bigpipe.compiler.prototype">module bigpipe.compiler.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.asyncemit">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>asyncemit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.bigPipe">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>bigPipe
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.catalog">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>catalog
+            <span class="apidocSignatureSpan">(pages, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.forEach">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>forEach
+            <span class="apidocSignatureSpan">(collection, iterator, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.html">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>html
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.http">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>http
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.merge">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>merge
+            <span class="apidocSignatureSpan">(target, additional)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.namespace">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>namespace
+            <span class="apidocSignatureSpan">(file, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.page">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>page
+            <span class="apidocSignatureSpan">(page)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.pagelet">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>pagelet
+            <span class="apidocSignatureSpan">(pagelet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.process">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>process
+            <span class="apidocSignatureSpan">(filepath, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.processor">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>processor
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.put">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>put
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.register">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>register
+            <span class="apidocSignatureSpan">(file, origin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.resolve">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>resolve
+            <span class="apidocSignatureSpan">(original)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.save">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>save
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.serve">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>serve
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.compiler.prototype.type">
+            function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>type
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bigpipe.file">module bigpipe.file</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file.file">
+            function <span class="apidocSignatureSpan">bigpipe.</span>file
+            <span class="apidocSignatureSpan">(filepath, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file.extend">
+            function <span class="apidocSignatureSpan">bigpipe.file.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file.get">
+            function <span class="apidocSignatureSpan">bigpipe.file.</span>get
+            <span class="apidocSignatureSpan">(method, getter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file.predefine">
+            function <span class="apidocSignatureSpan">bigpipe.file.</span>predefine
+            <span class="apidocSignatureSpan">(obj, pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file.readable">
+            function <span class="apidocSignatureSpan">bigpipe.file.</span>readable
+            <span class="apidocSignatureSpan">(method, description, clean)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file.set">
+            function <span class="apidocSignatureSpan">bigpipe.file.</span>set
+            <span class="apidocSignatureSpan">(method, getter, setter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.file.writable">
+            function <span class="apidocSignatureSpan">bigpipe.file.</span>writable
+            <span class="apidocSignatureSpan">(method, description, clean)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bigpipe.predefine">module bigpipe.predefine</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.predefine">
+            function <span class="apidocSignatureSpan">bigpipe.</span>predefine
+            <span class="apidocSignatureSpan">(obj, pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.create">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>create
+            <span class="apidocSignatureSpan">(property, description, pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.descriptor">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>descriptor
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.each">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>each
+            <span class="apidocSignatureSpan">(collection, iterator, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.extend">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.lazy">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>lazy
+            <span class="apidocSignatureSpan">(obj, prop, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.merge">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>merge
+            <span class="apidocSignatureSpan">(target, additional)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.mixin">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>mixin
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bigpipe.predefine.remove">
+            function <span class="apidocSignatureSpan">bigpipe.predefine.</span>remove
+            <span class="apidocSignatureSpan">(obj, keep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bigpipe.predefine.</span>READABLE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bigpipe.predefine.</span>WRITABLE</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bigpipe" id="apidoc.module.bigpipe">module bigpipe</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.bigpipe" id="apidoc.element.bigpipe.bigpipe">
+        function <span class="apidocSignatureSpan"></span>bigpipe
+        <span class="apidocSignatureSpan">(server, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BigPipe(server, options) {
+  if (!this) return new BigPipe(server, options);
+  this.fuse();
+
+  options = configure(options || {});
+
+  this._pagelets = [];                           // Stores our pagelets.
+  this._server = server;                         // HTTP server we work with.
+  this._options = options;                       // Configure options.
+  this._temper = new Temper;                     // Template parser.
+  this._plugins = Object.create(null);           // Plugin storage.
+  this._cache = options(&#x27;cache&#x27;, false);         // Enable URL lookup caching.
+  this._statusCodes = Object.create(null);       // Stores error pagelets.
+  this._zipline = new Zipline(options);          // Improved gzip compression.
+
+  //
+  // Setup the asset compiler before pagelets are discovered as they will
+  // need to hook in to the compiler to register all assets that are loaded.
+  //
+  this._compiler = new Compiler(
+    options(&#x27;dist&#x27;, path.join(process.cwd(), &#x27;dist&#x27;)), this, {
+      pathname: options(&#x27;static&#x27;, &#x27;/&#x27;)
+  });
+
+  //
+  // Middleware system, exposed as public so it can
+  // easily be called externally.
+  //
+  this.middleware = new Supply(this);
+  this.initialize(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection" id="apidoc.element.bigpipe.collection">
+        function <span class="apidocSignatureSpan">bigpipe.</span>collection
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Collection(options) {
+  options = options || {};
+
+  this.fuse();
+  this.readable(&#x27;stack&#x27;, []);
+
+  //
+  // Only use the toString of options if it was explicitly provided, otherwise
+  // this would default to the toString of the options object.
+  //
+  if (options.hasOwnProperty(&#x27;toString&#x27;)) {
+    this.writable(&#x27;_toString&#x27;, options.toString);
+  }
+
+  this.concat(options.files);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler" id="apidoc.element.bigpipe.compiler">
+        function <span class="apidocSignatureSpan">bigpipe.</span>compiler
+        <span class="apidocSignatureSpan">(directory, pipe, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Compiler(directory, pipe, options) {
+  options = options || {};
+  this.pipe = pipe;
+
+  // The namespace where we can download files.
+  this.pathname = options.pathname || &#x27;/&#x27;;
+
+  // Directory to save the compiled files.
+  this.dir = directory;
+
+  // List of pre-compiled or previous compiled files.
+  this.list = [];
+
+  // Contains template engines that are used to render.
+  this.core = [];
+
+  this.buffer = Object.create(null); // Precompiled asset cache
+  this.alias = Object.create(null);  // Path aliases.
+
+  //
+  // Create the provided directory, will short circuit if present.
+  //
+  mkdirp.sync(directory);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.createServer" id="apidoc.element.bigpipe.createServer">
+        function <span class="apidocSignatureSpan">bigpipe.</span>createServer
+        <span class="apidocSignatureSpan">(port, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServer(port, options) {
+  options = &#x27;object&#x27; === typeof port ? port : options || {};
+  if (&#x27;number&#x27; === typeof port || &#x27;string&#x27; === typeof port) options.port = +port;
+
+  var listen = options.listen === false
+    , bigpipe;
+
+  //
+  // Listening is done by our own .listen method, so we need to tell the
+  // createServer module that we don&#x27;t want it to start listening to our sizzle.
+  // This option is forced and should not be override by users configuration.
+  //
+  options.listen = false;
+  options.port = options.port || 8080;
+  bigpipe = new BigPipe(require(&#x27;create-server&#x27;)(options), options);
+
+  //
+  // By default the server will listen. Passing options.listen === false
+  // is only required if listening needs to be done with a manual call.
+  // BigPipe.createServer will pass as argument.
+  //
+  return listen ? bigpipe : bigpipe.listen(options.port);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+documentation and that should be corrected. So please, don&#x27;t hesitate to create
+issues, many of them.
+
+## Table of Contents
+
+**BigPipe**
+- [Getting started](#getting-started)
+- [BigPipe.<span class="apidocCodeKeywordSpan">createServer</span>()](#bigpipecreateserver)
+- [new BigPipe()](#new-bigpipe)
+- [BigPipe.version](#bigpipeversion)
+- [BigPipe.define()](#bigpipedefine)
+- [BigPipe.before()](#bigpipebefore)
+- [BigPipe.remove()](#bigpiperemove)
+- [BigPipe.disable()](#bigpipedisable)
+- [BigPipe.enable()](#bigpipeenable)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.extend" id="apidoc.element.bigpipe.extend">
+        function <span class="apidocSignatureSpan">bigpipe.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(protoProps, staticProps) {
+  var parent = this
+    , child;
+
+  //
+  // The constructor function for the new subclass is either defined by you
+  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
+  // by us to simply call the parent&#x27;s constructor.
+  //
+  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+    child = protoProps.constructor;
+  } else {
+    child = mode(parent);
+  }
+
+  //
+  // Set the prototype chain to inherit from `parent`, without calling
+  // `parent`&#x27;s constructor function.
+  //
+  function Surrogate() {
+    this.constructor = child;
+  }
+
+  Surrogate.prototype = parent.prototype;
+  child.prototype = new Surrogate;
+
+  //
+  // Add prototype properties (instance properties) to the subclass,
+  // if supplied.
+  //
+  if (protoProps) mixin(child.prototype, protoProps);
+
+  //
+  // Add static properties to the constructor function, if supplied.
+  //
+  copypaste(child, parent, staticProps);
+
+  //
+  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  //
+  child.__super__ = parent.prototype;
+
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file" id="apidoc.element.bigpipe.file">
+        function <span class="apidocSignatureSpan">bigpipe.</span>file
+        <span class="apidocSignatureSpan">(filepath, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function File(filepath, options) {
+  this.fuse();
+
+  options = options || {};
+  options.code = options.code || &#x27;&#x27;;
+  options.extname = options.extname || &#x27;.js&#x27;;
+  options.external = options.external || false;
+  options.dependency = options.dependency || false;
+
+  filepath = (filepath || &#x27;&#x27;).replace(path.extname(filepath), &#x27;&#x27;);
+
+  //
+  // Normalize aliasses. File can have multiple aliases, for example due to
+  // symlinked content. Aliases will be used by compiler.register
+  //
+  options.aliases = options.aliases || filepath;
+  options.aliases = Array.isArray(options.aliases)
+    ? options.aliases
+    : [ options.aliases ];
+
+  this.readable(&#x27;enumerable&#x27;, File.predefine(this, {
+    enumerable: true,
+    writable: true
+  }));
+
+  this.writable(&#x27;code&#x27;);                               // Actual code.
+  this.writable(&#x27;buffer&#x27;);                             // Buffer of code.
+  this.writable(&#x27;_events&#x27;);                            // EventEmitter 3.
+  this.writable(&#x27;aliases&#x27;, options.aliases);           // Absolute paths to source.
+
+  this.enumerable(&#x27;length&#x27;);                           // Buffer length.
+  this.enumerable(&#x27;hash&#x27;, null);                       // Hashed code representation.
+  this.enumerable(&#x27;pagelets&#x27;, []);                     // List of pagelets.
+  this.enumerable(&#x27;filepath&#x27;, filepath);               // Absolute path to file.
+  this.enumerable(&#x27;extname&#x27;, options.extname);         // File extension.
+  this.enumerable(&#x27;external&#x27;, options.external);       // File is hosted externally.
+
+  this.readable(&#x27;dependency&#x27;, options.dependency);     // File is page dependency.
+  this.readable(&#x27;type&#x27;, this.mime[this.extname]);      // The content-type.
+
+  //
+  // Process the content of the file if provided.
+  //
+  this.hash = this.encrypt(options.code);
+  this.set(options.code);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.get" id="apidoc.element.bigpipe.get">
+        function <span class="apidocSignatureSpan">bigpipe.</span>get
+        <span class="apidocSignatureSpan">(method, getter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get(method, getter) {
+  Object.defineProperty(Base.prototype, method, {
+    configurable: false,
+    enumerable: false,
+    get: getter
+  });
+
+  return get;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+The first argument in the function call is port number you want the server to
+listen on. The second argument is an object with the configuration/options of the
+BigPipe server. The following options are supported:
+
+- **cache** A cache which is used for storing URL lookups. This cache instance
+  should have a `.<span class="apidocCodeKeywordSpan">get</span>(key)` and `.set(key, value)` method. Defaults to `false`
+- **dist** The location of our folder where we can store our compiled CSS and
+  JavaScript to disk. If the path or folder does not exist it will be
+  automatically created. Defaults to `working dir/dist`.
+- **pagelets** A directory that contains your Pagelet definitions or an array of Pagelet
+  constructors. Defaults to `working dir/pagelets`. If you don&#x27;t provide Pages it
+  will serve a 404 page for every request.
+- **parser** The message parser we should use for our real-time communication.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine" id="apidoc.element.bigpipe.predefine">
+        function <span class="apidocSignatureSpan">bigpipe.</span>predefine
+        <span class="apidocSignatureSpan">(obj, pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefine(obj, pattern) {
+  pattern = pattern || predefine.READABLE;
+
+  return function predefined(method, description, clean) {
+    //
+    // If we are given a description compatible Object, use that instead of
+    // setting it as value. This allows easy creation of getters and setters.
+    //
+    if (
+         !predefine.descriptor(description)
+      || is(description, &#x27;object&#x27;)
+         &#x26;&#x26; !clean
+         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    ) { description = {
+        value: description
+      };
+    }
+
+    //
+    // Prevent thrown errors when we attempt to override a readonly
+    // property
+    //
+    var described = Object.getOwnPropertyDescriptor(obj, method);
+    if (described &#x26;&#x26; !described.configurable) {
+      return predefined;
+    }
+
+    Object.defineProperty(obj, method, !clean
+      ? predefine.mixin({}, pattern, description)
+      : description
+    );
+
+    return predefined;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// symlinked content. Aliases will be used by compiler.register
+//
+options.aliases = options.aliases || filepath;
+options.aliases = Array.isArray(options.aliases)
+  ? options.aliases
+  : [ options.aliases ];
+
+this.readable(&#x27;enumerable&#x27;, File.<span class="apidocCodeKeywordSpan">predefine</span>(this, {
+  enumerable: true,
+  writable: true
+}));
+
+this.writable(&#x27;code&#x27;);                               // Actual code.
+this.writable(&#x27;buffer&#x27;);                             // Buffer of code.
+this.writable(&#x27;_events&#x27;);                            // EventEmitter 3.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.readable" id="apidoc.element.bigpipe.readable">
+        function <span class="apidocSignatureSpan">bigpipe.</span>readable
+        <span class="apidocSignatureSpan">(method, description, clean)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefined(method, description, clean) {
+  //
+  // If we are given a description compatible Object, use that instead of
+  // setting it as value. This allows easy creation of getters and setters.
+  //
+  if (
+       !predefine.descriptor(description)
+    || is(description, &#x27;object&#x27;)
+       &#x26;&#x26; !clean
+       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+  ) { description = {
+      value: description
+    };
+  }
+
+  //
+  // Prevent thrown errors when we attempt to override a readonly
+  // property
+  //
+  var described = Object.getOwnPropertyDescriptor(obj, method);
+  if (described &#x26;&#x26; !described.configurable) {
+    return predefined;
+  }
+
+  Object.defineProperty(obj, method, !clean
+    ? predefine.mixin({}, pattern, description)
+    : description
+  );
+
+  return predefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Initialize various things of BigPipe.
+ *
+ * @param {Object} options Optional options.
+ * @returns {BigPipe} Fluent interface.
+ * @api private
+ */
+BigPipe.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;initialize&#x27;, function initialize(options) {
+//
+// Add our default middleware layers, this needs to be done before we
+// initialize or add plugins as we want to make sure that OUR middleware is
+// loaded first as it&#x27;s the most important (at least, in our opinion).
+//
+this.middleware.use(&#x27;defaults&#x27;, require(&#x27;./middleware/defaults&#x27;));
+this.middleware.use(&#x27;zipline&#x27;, this._zipline.middleware());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.set" id="apidoc.element.bigpipe.set">
+        function <span class="apidocSignatureSpan">bigpipe.</span>set
+        <span class="apidocSignatureSpan">(method, getter, setter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(method, getter, setter) {
+  Object.defineProperty(Base.prototype, method, {
+    configurable: false,
+    enumerable: false,
+    get: getter,
+    set: setter
+  });
+
+  return set;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+The first argument in the function call is port number you want the server to
+listen on. The second argument is an object with the configuration/options of the
+BigPipe server. The following options are supported:
+
+- **cache** A cache which is used for storing URL lookups. This cache instance
+  should have a `.get(key)` and `.<span class="apidocCodeKeywordSpan">set</span>(key, value)` method. Defaults to `false`
+- **dist** The location of our folder where we can store our compiled CSS and
+  JavaScript to disk. If the path or folder does not exist it will be
+  automatically created. Defaults to `working dir/dist`.
+- **pagelets** A directory that contains your Pagelet definitions or an array of Pagelet
+  constructors. Defaults to `working dir/pagelets`. If you don&#x27;t provide Pages it
+  will serve a 404 page for every request.
+- **parser** The message parser we should use for our real-time communication.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.writable" id="apidoc.element.bigpipe.writable">
+        function <span class="apidocSignatureSpan">bigpipe.</span>writable
+        <span class="apidocSignatureSpan">(method, description, clean)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefined(method, description, clean) {
+  //
+  // If we are given a description compatible Object, use that instead of
+  // setting it as value. This allows easy creation of getters and setters.
+  //
+  if (
+       !predefine.descriptor(description)
+    || is(description, &#x27;object&#x27;)
+       &#x26;&#x26; !clean
+       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+  ) { description = {
+      value: description
+    };
+  }
+
+  //
+  // Prevent thrown errors when we attempt to override a readonly
+  // property
+  //
+  var described = Object.getOwnPropertyDescriptor(obj, method);
+  if (described &#x26;&#x26; !described.configurable) {
+    return predefined;
+  }
+
+  Object.defineProperty(obj, method, !clean
+    ? predefine.mixin({}, pattern, description)
+    : description
+  );
+
+  return predefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.readable(&#x27;stack&#x27;, []);
+
+  //
+  // Only use the toString of options if it was explicitly provided, otherwise
+  // this would default to the toString of the options object.
+  //
+  if (options.hasOwnProperty(&#x27;toString&#x27;)) {
+    this.<span class="apidocCodeKeywordSpan">writable</span>(&#x27;_toString&#x27;, options.toString);
+  }
+
+  this.concat(options.files);
+}
+
+//
+// Fuse collection with extendible.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bigpipe.collection" id="apidoc.module.bigpipe.collection">module bigpipe.collection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection.collection" id="apidoc.element.bigpipe.collection.collection">
+        function <span class="apidocSignatureSpan">bigpipe.</span>collection
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Collection(options) {
+  options = options || {};
+
+  this.fuse();
+  this.readable(&#x27;stack&#x27;, []);
+
+  //
+  // Only use the toString of options if it was explicitly provided, otherwise
+  // this would default to the toString of the options object.
+  //
+  if (options.hasOwnProperty(&#x27;toString&#x27;)) {
+    this.writable(&#x27;_toString&#x27;, options.toString);
+  }
+
+  this.concat(options.files);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection.extend" id="apidoc.element.bigpipe.collection.extend">
+        function <span class="apidocSignatureSpan">bigpipe.collection.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(protoProps, staticProps) {
+  var parent = this
+    , child;
+
+  //
+  // The constructor function for the new subclass is either defined by you
+  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
+  // by us to simply call the parent&#x27;s constructor.
+  //
+  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+    child = protoProps.constructor;
+  } else {
+    child = mode(parent);
+  }
+
+  //
+  // Set the prototype chain to inherit from `parent`, without calling
+  // `parent`&#x27;s constructor function.
+  //
+  function Surrogate() {
+    this.constructor = child;
+  }
+
+  Surrogate.prototype = parent.prototype;
+  child.prototype = new Surrogate;
+
+  //
+  // Add prototype properties (instance properties) to the subclass,
+  // if supplied.
+  //
+  if (protoProps) mixin(child.prototype, protoProps);
+
+  //
+  // Add static properties to the constructor function, if supplied.
+  //
+  copypaste(child, parent, staticProps);
+
+  //
+  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  //
+  child.__super__ = parent.prototype;
+
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection.get" id="apidoc.element.bigpipe.collection.get">
+        function <span class="apidocSignatureSpan">bigpipe.collection.</span>get
+        <span class="apidocSignatureSpan">(method, getter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get(method, getter) {
+  Object.defineProperty(Base.prototype, method, {
+    configurable: false,
+    enumerable: false,
+    get: getter
+  });
+
+  return get;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+The first argument in the function call is port number you want the server to
+listen on. The second argument is an object with the configuration/options of the
+BigPipe server. The following options are supported:
+
+- **cache** A cache which is used for storing URL lookups. This cache instance
+  should have a `.<span class="apidocCodeKeywordSpan">get</span>(key)` and `.set(key, value)` method. Defaults to `false`
+- **dist** The location of our folder where we can store our compiled CSS and
+  JavaScript to disk. If the path or folder does not exist it will be
+  automatically created. Defaults to `working dir/dist`.
+- **pagelets** A directory that contains your Pagelet definitions or an array of Pagelet
+  constructors. Defaults to `working dir/pagelets`. If you don&#x27;t provide Pages it
+  will serve a 404 page for every request.
+- **parser** The message parser we should use for our real-time communication.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection.predefine" id="apidoc.element.bigpipe.collection.predefine">
+        function <span class="apidocSignatureSpan">bigpipe.collection.</span>predefine
+        <span class="apidocSignatureSpan">(obj, pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefine(obj, pattern) {
+  pattern = pattern || predefine.READABLE;
+
+  return function predefined(method, description, clean) {
+    //
+    // If we are given a description compatible Object, use that instead of
+    // setting it as value. This allows easy creation of getters and setters.
+    //
+    if (
+         !predefine.descriptor(description)
+      || is(description, &#x27;object&#x27;)
+         &#x26;&#x26; !clean
+         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    ) { description = {
+        value: description
+      };
+    }
+
+    //
+    // Prevent thrown errors when we attempt to override a readonly
+    // property
+    //
+    var described = Object.getOwnPropertyDescriptor(obj, method);
+    if (described &#x26;&#x26; !described.configurable) {
+      return predefined;
+    }
+
+    Object.defineProperty(obj, method, !clean
+      ? predefine.mixin({}, pattern, description)
+      : description
+    );
+
+    return predefined;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// symlinked content. Aliases will be used by compiler.register
+//
+options.aliases = options.aliases || filepath;
+options.aliases = Array.isArray(options.aliases)
+  ? options.aliases
+  : [ options.aliases ];
+
+this.readable(&#x27;enumerable&#x27;, File.<span class="apidocCodeKeywordSpan">predefine</span>(this, {
+  enumerable: true,
+  writable: true
+}));
+
+this.writable(&#x27;code&#x27;);                               // Actual code.
+this.writable(&#x27;buffer&#x27;);                             // Buffer of code.
+this.writable(&#x27;_events&#x27;);                            // EventEmitter 3.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection.readable" id="apidoc.element.bigpipe.collection.readable">
+        function <span class="apidocSignatureSpan">bigpipe.collection.</span>readable
+        <span class="apidocSignatureSpan">(method, description, clean)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefined(method, description, clean) {
+  //
+  // If we are given a description compatible Object, use that instead of
+  // setting it as value. This allows easy creation of getters and setters.
+  //
+  if (
+       !predefine.descriptor(description)
+    || is(description, &#x27;object&#x27;)
+       &#x26;&#x26; !clean
+       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+  ) { description = {
+      value: description
+    };
+  }
+
+  //
+  // Prevent thrown errors when we attempt to override a readonly
+  // property
+  //
+  var described = Object.getOwnPropertyDescriptor(obj, method);
+  if (described &#x26;&#x26; !described.configurable) {
+    return predefined;
+  }
+
+  Object.defineProperty(obj, method, !clean
+    ? predefine.mixin({}, pattern, description)
+    : description
+  );
+
+  return predefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Initialize various things of BigPipe.
+ *
+ * @param {Object} options Optional options.
+ * @returns {BigPipe} Fluent interface.
+ * @api private
+ */
+BigPipe.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;initialize&#x27;, function initialize(options) {
+//
+// Add our default middleware layers, this needs to be done before we
+// initialize or add plugins as we want to make sure that OUR middleware is
+// loaded first as it&#x27;s the most important (at least, in our opinion).
+//
+this.middleware.use(&#x27;defaults&#x27;, require(&#x27;./middleware/defaults&#x27;));
+this.middleware.use(&#x27;zipline&#x27;, this._zipline.middleware());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection.set" id="apidoc.element.bigpipe.collection.set">
+        function <span class="apidocSignatureSpan">bigpipe.collection.</span>set
+        <span class="apidocSignatureSpan">(method, getter, setter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(method, getter, setter) {
+  Object.defineProperty(Base.prototype, method, {
+    configurable: false,
+    enumerable: false,
+    get: getter,
+    set: setter
+  });
+
+  return set;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+The first argument in the function call is port number you want the server to
+listen on. The second argument is an object with the configuration/options of the
+BigPipe server. The following options are supported:
+
+- **cache** A cache which is used for storing URL lookups. This cache instance
+  should have a `.get(key)` and `.<span class="apidocCodeKeywordSpan">set</span>(key, value)` method. Defaults to `false`
+- **dist** The location of our folder where we can store our compiled CSS and
+  JavaScript to disk. If the path or folder does not exist it will be
+  automatically created. Defaults to `working dir/dist`.
+- **pagelets** A directory that contains your Pagelet definitions or an array of Pagelet
+  constructors. Defaults to `working dir/pagelets`. If you don&#x27;t provide Pages it
+  will serve a 404 page for every request.
+- **parser** The message parser we should use for our real-time communication.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.collection.writable" id="apidoc.element.bigpipe.collection.writable">
+        function <span class="apidocSignatureSpan">bigpipe.collection.</span>writable
+        <span class="apidocSignatureSpan">(method, description, clean)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefined(method, description, clean) {
+  //
+  // If we are given a description compatible Object, use that instead of
+  // setting it as value. This allows easy creation of getters and setters.
+  //
+  if (
+       !predefine.descriptor(description)
+    || is(description, &#x27;object&#x27;)
+       &#x26;&#x26; !clean
+       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+  ) { description = {
+      value: description
+    };
+  }
+
+  //
+  // Prevent thrown errors when we attempt to override a readonly
+  // property
+  //
+  var described = Object.getOwnPropertyDescriptor(obj, method);
+  if (described &#x26;&#x26; !described.configurable) {
+    return predefined;
+  }
+
+  Object.defineProperty(obj, method, !clean
+    ? predefine.mixin({}, pattern, description)
+    : description
+  );
+
+  return predefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.readable(&#x27;stack&#x27;, []);
+
+  //
+  // Only use the toString of options if it was explicitly provided, otherwise
+  // this would default to the toString of the options object.
+  //
+  if (options.hasOwnProperty(&#x27;toString&#x27;)) {
+    this.<span class="apidocCodeKeywordSpan">writable</span>(&#x27;_toString&#x27;, options.toString);
+  }
+
+  this.concat(options.files);
+}
+
+//
+// Fuse collection with extendible.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bigpipe.compiler" id="apidoc.module.bigpipe.compiler">module bigpipe.compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.compiler" id="apidoc.element.bigpipe.compiler.compiler">
+        function <span class="apidocSignatureSpan">bigpipe.</span>compiler
+        <span class="apidocSignatureSpan">(directory, pipe, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Compiler(directory, pipe, options) {
+  options = options || {};
+  this.pipe = pipe;
+
+  // The namespace where we can download files.
+  this.pathname = options.pathname || &#x27;/&#x27;;
+
+  // Directory to save the compiled files.
+  this.dir = directory;
+
+  // List of pre-compiled or previous compiled files.
+  this.list = [];
+
+  // Contains template engines that are used to render.
+  this.core = [];
+
+  this.buffer = Object.create(null); // Precompiled asset cache
+  this.alias = Object.create(null);  // Path aliases.
+
+  //
+  // Create the provided directory, will short circuit if present.
+  //
+  mkdirp.sync(directory);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bigpipe.compiler.prototype" id="apidoc.module.bigpipe.compiler.prototype">module bigpipe.compiler.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.asyncemit" id="apidoc.element.bigpipe.compiler.prototype.asyncemit">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>asyncemit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function asyncemit() {
+  var args = Array.prototype.slice.call(arguments, 0)
+    , event = args.shift()
+    , async = args.length
+    , fn = args.pop()
+    , selfie = this
+    , listeners;
+
+  listeners = (this._events || {})[event] || [];
+  if (listeners &#x26;&#x26; !Array.isArray(listeners)) {
+    listeners = [ listeners ];
+  }
+
+<span class="apidocCodeCommentSpan">  /**
+   * Simple async helper utility.
+   *
+   * @param {Array} stack The listeners for the specified event.
+   * @api private
+   */
+</span>  (function each(stack) {
+    if (!stack.length) return fn();
+
+    var listener = stack.shift();
+
+    if (listener.once) {
+      selfie.removeListener(event, listener.fn);
+    }
+
+    if (listener.fn.length !== async) {
+      listener.fn.apply(listener.context, args);
+      return each(stack);
+    }
+
+    //
+    // Async operation
+    //
+    listener.fn.apply(
+      listener.context,
+      args.concat(function done(err) {
+        if (err) return fn(err);
+
+        each(stack);
+      })
+    );
+  })(listeners.slice());
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ //
+ file.aliases.forEach(function add(alias) {
+   if (!alias) return;
+
+   this.alias[alias] = file.location;
+ }, this);
+
+ this.<span class="apidocCodeKeywordSpan">asyncemit</span>(&#x27;register&#x27;, file, function (error) {
+   if (error) return compiler.emit(&#x27;error&#x27;, error);
+   compiler.save(file);
+ });
+};
+
+/**
+* Catalog the pages. As we&#x27;re not caching the file look ups, this method can be
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.bigPipe" id="apidoc.element.bigpipe.compiler.prototype.bigPipe">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>bigPipe
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bigPipe(done) {
+  var framework = this.pipe._framework
+    , library
+    , plugin
+    , name
+    , file;
+
+  debug(&#x27;Creating the bigpipe.js front-end library&#x27;);
+
+  library = browserify();
+  framework.get(&#x27;library&#x27;).forEach(function each(file) {
+    library.require(file.path, { expose: file.expose });
+  });
+
+  if (this.core.length) library.require(new Content(this.core));
+
+  for (name in this.pipe._plugins) {
+    plugin = this.pipe._plugins[name];
+
+    if (plugin.library) {
+      library.require(plugin.library.path, { expose: plugin.library.name });
+    }
+
+    if (!plugin.client || !plugin.path) continue;
+    debug(&#x27;Adding the client code of the %s plugin to the client file&#x27;, name);
+
+    library.require(new Content(framework.get(&#x27;plugin&#x27;, {
+      client: plugin.client.toString(),
+      name: name
+    })), { file: plugin.path, entry: true });
+  }
+
+  library.bundle(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  //
+  async.waterfall([
+    async.apply(async.reduce, Object.keys(list), {}, prefab),
+    register
+  ], function completed(err, data) {
+    if (err) return done(err);
+
+    compiler.<span class="apidocCodeKeywordSpan">bigPipe</span>(function browserified(err, buffer) {
+if (err) return done(err);
+debug(&#x27;Finished creating browserify build&#x27;);
+
+var file = new File(framework.get(&#x27;name&#x27;), {
+  dependency: true,
+  extname: &#x27;.js&#x27;,
+  code: buffer
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.catalog" id="apidoc.element.bigpipe.compiler.prototype.catalog">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>catalog
+        <span class="apidocSignatureSpan">(pages, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function catalog(pages, done) {
+  var framework = this.pipe._framework
+    , temper = this.pipe._temper
+    , core = this.core
+    , compiler = this
+    , list = {};
+
+<span class="apidocCodeCommentSpan">  /**
+   * Process the dependencies.
+   *
+   * @param {Object} assemble generated collection of file properties.
+   * @param {String} filepath The location of a file.
+   * @param {Function} next completion callback.
+   * @api private
+   */
+</span>  function prefab(assemble, filepath, next) {
+    if (compiler.http(filepath)) return next(null, assemble);
+
+    compiler.process(filepath, function store(error, code) {
+      if (error) return next(error);
+
+      var file = new File(filepath, {
+        extname: compiler.type(filepath),
+        dependency: list[filepath].dependency,
+        code: code
+      });
+
+      file = file.hash in assemble ? assemble[file.hash] : file;
+      file.pagelets = (file.pagelets || []).concat(list[filepath].pagelets);
+      file.alias(filepath);
+
+      assemble[file.hash] = file;
+      debug(&#x27;finished pre-processing %s to hash %s&#x27;, path.basename(filepath), file.hash);
+      next(null, assemble);
+    });
+  }
+
+  /**
+   * Register the files in the assembly, prefix CSS first.
+   *
+   * @param {Object} assemble generated collection of file properties.
+   * @param {Function} next completion callback.
+   * @api private
+   */
+  function register(assemble, next) {
+    async.each(Object.keys(assemble), function prefix(hash, fn) {
+      compiler.asyncemit(&#x27;assembly&#x27;, assemble[hash], function (err) {
+        if (err) return fn(err);
+
+        compiler.register(assemble[hash]);
+        fn();
+      });
+    }, next);
+  }
+
+  //
+  // Check all pages for dependencies and files to add to the list.
+  //
+  pages.forEach(function each(Page) {
+    var page = Page.prototype
+      , dependencies = Array.isArray(page.dependencies) ? page.dependencies : [];
+
+    /**
+     * Add files to the process list.
+     *
+     * @param {String} name Pagelet name.
+     * @param {String|Array} files Path to files.
+     * @param {Boolean} dependency Push this file to global dependencies.
+     * @api private
+     */
+    function add(name, files, dependency) {
+      //
+      // Check if files is an object and return, this Pagelet has already
+      // been cataloged and the dependencies overwritten.
+      //
+      if (&#x27;object&#x27; === typeof files &#x26;&#x26; !Array.isArray(files)) return;
+      files = Array.isArray(files) ? files : [ files ];
+      files.forEach(function loopFiles(file) {
+        if (dependency &#x26;&#x26; !~dependencies.indexOf(file)) dependencies.push(file);
+
+        //
+        // Use stored file or create a new one based on the filepath.
+        //
+        file = list[file] = list[file] || { dependency: false, pagelets: [] };
+        if (name &#x26;&#x26; !~file.pagelets.indexOf(name)) file.pagelets.push(name);
+        if (dependency) file.dependency = true;
+      });
+    }
+
+    /**
+     * Register a new view.
+     *
+     * @param {String} path Location of the template file
+     * @param {String} error
+     * @api private
+     */
+    function view(page, type) {
+      var path = page[type]
+        , data;
+
+      debug(&#x27;Attempting to compile the view %s&#x27;, path);
+      data = temper.fetch(path);
+
+      //
+      // The views can be rendered on the client, but some of them require
+      // a library, this library should be cached in the core library.
+      //
+      if (data.library &#x26;&#x26; !~core.indexOf(data.library)) {
+        core.push(data.library);
+      }
+
+      if (!data.hash) data.hash = {
+        client: crypto.createHash(&#x27;md5&#x27;).update(data.client).digest(&#x27;hex&#x27;)
+      };
+
+      compiler.register(new File(path, {
+        extname: &#x27;.js&#x27;,
+        code: framework.get(&#x27;template&#x27;, {
+          name: data.hash.client,
+          client: data.client
+        })
+      }));
+    }
+
+    //
+    // Note: quick fix, now that routed pages have become pagelets
+    // we should also resolve the Page assets.
+    //
+    page._children.concat(Page).forEach(function each(Pagelet) {
+      if (Array.isArray(Pagelet)) return Pagelet.forEach(each);
+
+      var pagelet = Pagelet.prototype;
+
+      if (pagelet.js) add(pagelet. ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   bigpipe._statusCodes[500] = status[1];
+   bigpipe._bootstrap = status[2];
+
+   //
+   // Also catalog dependencies on status Pagelets and bootstrap.
+   // As the developer could have provided custom Pagelets.
+   //
+   bigpipe._compiler.<span class="apidocCodeKeywordSpan">catalog</span>(bigpipe._pagelets.concat(status), done);
+ });
+
+ return this;
+});
+
+/**
+* Render a pagelet from our `statusCodes` collection.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.forEach" id="apidoc.element.bigpipe.compiler.prototype.forEach">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>forEach
+        <span class="apidocSignatureSpan">(collection, iterator, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forEach(collection, iterator, context) {
+  if (arguments.length === 1) {
+    iterator = collection;
+    collection = this;
+  }
+
+  var isArray = Array.isArray(collection || this)
+    , length = collection.length
+    , i = 0
+    , value;
+
+  if (context) {
+    if (isArray) {
+      for (; i &#x3c; length; i++) {
+        value = iterator.apply(collection[i], context);
+        if (value === false) break;
+      }
+    } else {
+      for (i in collection) {
+        value = iterator.apply(collection[i], context);
+        if (value === false) break;
+      }
+    }
+  } else {
+    if (isArray) {
+      for (; i &#x3c; length; i++) {
+        value = iterator.call(collection[i], i, collection[i]);
+        if (value === false) break;
+      }
+    } else {
+      for (i in collection) {
+        value = iterator.call(collection[i], i, collection[i]);
+        if (value === false) break;
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  bigpipe._pagelets = bigpipe._pagelets.filter(function filter(Pagelet) {
+var router = Pagelet.router
+  , parent = !Pagelet.prototype._parent;
+
+//
+// Crawl all the children for potential routes.
+//
+Pagelet.prototype._children.<span class="apidocCodeKeywordSpan">forEach</span>(function eachChild(pagelet) {
+  pagelet = filter(pagelet[0]);
+  if (pagelet) childs.push(pagelet);
+});
+
+//
+// Extract 404, 500 and bootstrap pagelets.
+//
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.html" id="apidoc.element.bigpipe.compiler.prototype.html">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>html
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function html(file) {
+  switch (file.extname) {
+    case &#x27;.css&#x27;: return &#x27;&#x3c;link rel=stylesheet href=&#x22;&#x27;+ file.location +&#x27;&#x22; /&#x3e;&#x27;;
+    case &#x27;.js&#x27;: return &#x27;&#x3c;script src=&#x22;&#x27;+ file.location +&#x27;&#x22;&#x3e;&#x3c;/script&#x3e;&#x27;;
+    default: return &#x27;&#x27;;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.http" id="apidoc.element.bigpipe.compiler.prototype.http">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>http
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function http(filepath) {
+  return /^(http:|https:)?\/\//.test(filepath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   *
+   * @param {Object} assemble generated collection of file properties.
+   * @param {String} filepath The location of a file.
+   * @param {Function} next completion callback.
+   * @api private
+   */
+  function prefab(assemble, filepath, next) {
+    if (compiler.<span class="apidocCodeKeywordSpan">http</span>(filepath)) return next(null, assemble);
+
+    compiler.process(filepath, function store(error, code) {
+if (error) return next(error);
+
+var file = new File(filepath, {
+  extname: compiler.type(filepath),
+  dependency: list[filepath].dependency,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.merge" id="apidoc.element.bigpipe.compiler.prototype.merge">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>merge
+        <span class="apidocSignatureSpan">(target, additional)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function merge(target, additional) {
+  var result = target
+    , compiler = this;
+
+  if (Array.isArray(target)) {
+    compiler.forEach(additional, function arrayForEach(index) {
+      if (JSON.stringify(target).indexOf(JSON.stringify(additional[index])) === -1) {
+        result.push(additional[index]);
+      }
+    });
+  } else if (&#x27;object&#x27; === typeof target) {
+    compiler.forEach(additional, function objectForEach(key, value) {
+      if (target[key] === void 0) {
+        result[key] = value;
+      } else {
+        result[key] = compiler.merge(target[key], additional[key]);
+      }
+    });
+  } else {
+    result = additional;
+  }
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   return obj[key];
+ }
+
+ //
+ // Allow new options to be be merged in against the original object.
+ //
+ get.merge = function merge(properties) {
+   return BigPipe.predefine.<span class="apidocCodeKeywordSpan">merge</span>(obj, properties);
+ };
+
+ return get;
+}
+
+/**
+* Our pagelet management.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.namespace" id="apidoc.element.bigpipe.compiler.prototype.namespace">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>namespace
+        <span class="apidocSignatureSpan">(file, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prefix(file, fn) {
+  //
+  // Only prefix if the code is CSS content and not a page dependency.
+  //
+  if (!file.is(&#x27;css&#x27;) || file.dependency) return fn(null, file);
+  debug(&#x27;namespacing %s to pagelets %s&#x27;, file.hash, file.pagelets);
+
+  var processor = preprocess.css
+    , options = {}
+    , pagelets;
+
+  //
+  // Transform the pagelets names to data selectors.
+  //
+  pagelets = file.pagelets.map(function prepare(pagelet) {
+    return &#x27;[data-pagelet=&#x22;&#x27;+ pagelet +&#x27;&#x22;]&#x27;;
+  });
+
+  options.plugins = [ processor.plugins.namespace(pagelets) ];
+  processor(file.code, options, function done(error, code) {
+    if (error) return fn(error);
+    fn(null, file.set(code, true));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  //
+  // Transform the pagelets names to data selectors.
+  //
+  pagelets = file.pagelets.map(function prepare(pagelet) {
+    return &#x27;[data-pagelet=&#x22;&#x27;+ pagelet +&#x27;&#x22;]&#x27;;
+  });
+
+  options.plugins = [ processor.plugins.<span class="apidocCodeKeywordSpan">namespace</span>(pagelets) ];
+  processor(file.code, options, function done(error, code) {
+    if (error) return fn(error);
+    fn(null, file.set(code, true));
+  });
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.page" id="apidoc.element.bigpipe.compiler.prototype.page">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>page
+        <span class="apidocSignatureSpan">(page)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function find(page) {
+  var compiler = this
+    , assets = new Collection({ toString: this.html });
+
+  //
+  // The page is rendered in `sync` mode, so add all the required CSS files from
+  // the pagelet to the head of the page.
+  //
+  if (!(&#x27;.css&#x27; in page._dependencies)) page._dependencies[&#x27;.css&#x27;] = [];
+  if (&#x27;sync&#x27; === page.mode) page._enabled.forEach(function enabled(pagelet) {
+    Array.prototype.push.apply(page._dependencies[&#x27;.css&#x27;], compiler.pagelet(pagelet).css);
+  });
+
+  //
+  // Push dependencies into the page. JS is pushed as extension after CSS,
+  // still adheres to the CSS before JS pattern, although it is less important
+  // in newer browser. See http://stackoverflow.com/questions/9271276/ for more
+  // details. Foreign extensions are added last to allow unidentified files to
+  // be included if possible.
+  //
+  preprocess.extensions.concat(&#x27;.js&#x27;, &#x27;foreign&#x27;).forEach(function map(type) {
+    if (!(type in page._dependencies)) return;
+
+    page._dependencies[type].forEach(function each(dependency) {
+      if (compiler.http(dependency)) {
+        return assets.push(new File(dependency, {
+          extname: compiler.type(dependency),
+          dependency: true,
+          external: true
+        }));
+      }
+
+      dependency = compiler.resolve(dependency);
+      if (!dependency) return;
+
+      assets.push(compiler.buffer[dependency]);
+    });
+  });
+
+  return assets;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+//
+// Create a bootstrap Pagelet, this is a special Pagelet that is flushed
+// as soon as possible to instantiate the client side rendering.
+//
+child.bootstrap = new this._bootstrap({
+  dependencies: this._compiler.<span class="apidocCodeKeywordSpan">page</span>(child),
+  params: child._params,
+  length: child.length,
+  child: child.name,
+  mode: child.mode,
+  bigpipe: this,
+  res: res,
+  req: req
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.pagelet" id="apidoc.element.bigpipe.compiler.prototype.pagelet">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>pagelet
+        <span class="apidocSignatureSpan">(pagelet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function find(pagelet) {
+  var error = this.resolve(pagelet.error)
+    , view = this.resolve(pagelet.view)
+    , frag = {}
+    , css = []
+    , js = [];
+
+  debug(&#x27;Compiling data from pagelet %s/%s&#x27;, pagelet.name, pagelet.id);
+
+  if (pagelet.js.length) js = js.concat(pagelet.js.map(this.resolve, this));
+  if (pagelet.css.length) css = css.concat(pagelet.css.map(this.resolve, this));
+  if (view) js.push(view);
+  if (error) js.push(error);
+
+  frag.css = css;               // Add the compiled css.
+  frag.js = js;                 // Add the required js.
+
+  return frag;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+pagelet.debug(&#x27;Processing the pagelets in `async` mode&#x27;);
+
+pagelets = pagelet._enabled.concat(pagelet._disabled, pagelet);
+async.each(pagelets, function render(child, next) {
+  pagelet.debug(&#x27;Invoking pagelet %s/%s render&#x27;, child.name, child.id);
+
+  child.render({
+    data: bigpipe._compiler.<span class="apidocCodeKeywordSpan">pagelet</span>(child)
+  }, function rendered(error, content) {
+    if (error) return render(bigpipe.capture(error), child, next);
+    child.write(content).flush(next);
+  });
+}, function done(error) {
+  if (error) return bigpipe.capture(error);
+  pagelet.end();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.process" id="apidoc.element.bigpipe.compiler.prototype.process">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>process
+        <span class="apidocSignatureSpan">(filepath, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function process(filepath, fn) {
+  var processor = this.processor(filepath)
+    , paths = [ path.dirname(filepath) ];
+
+  fs.readFile(filepath, &#x27;utf-8&#x27;, function read(error, code) {
+    if (error || !processor) return fn(error, code);
+
+    //
+    // Only preprocess the file if required.
+    //
+    processor(code, { location: filepath, paths: paths }, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {String} filepath full path to file
+ * @api private
+ */
+Compiler.prototype.put = function put(filepath) {
+  var compiler = this;
+
+  compiler.<span class="apidocCodeKeywordSpan">process</span>(filepath, function processed(error, code) {
+if (error) return compiler.emit(&#x27;error&#x27;, error);
+
+compiler.emit(&#x27;preprocessed&#x27;, filepath);
+compiler.register(new File(filepath, {
+  extname: compiler.type(filepath),
+  code: code
+}));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.processor" id="apidoc.element.bigpipe.compiler.prototype.processor">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>processor
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function processor(filepath) {
+  return preprocess[path.extname(filepath).substr(1)];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Get the processed extension for a certain file.
+*
+* @param {String} filepath full path to file
+* @api public
+*/
+Compiler.prototype.type = function type(filepath) {
+ var processor = this.<span class="apidocCodeKeywordSpan">processor</span>(filepath);
+ return processor ? &#x27;.&#x27; + processor.export : path.extname(filepath);
+};
+
+/**
+* Get preprocessor.
+*
+* @param {String} filepath
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.put" id="apidoc.element.bigpipe.compiler.prototype.put">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>put
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function put(filepath) {
+  var compiler = this;
+
+  compiler.process(filepath, function processed(error, code) {
+    if (error) return compiler.emit(&#x27;error&#x27;, error);
+
+    compiler.emit(&#x27;preprocessed&#x27;, filepath);
+    compiler.register(new File(filepath, {
+      extname: compiler.type(filepath),
+      code: code
+    }));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.register" id="apidoc.element.bigpipe.compiler.prototype.register">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>register
+        <span class="apidocSignatureSpan">(file, origin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function register(file, origin) {
+  if (!file.length) return debug(&#x27;Skipped registering empty file %j&#x27;, file.aliases);
+  var compiler = this;
+
+  //
+  // Add file to the buffer collection.
+  //
+  this.buffer[origin ? file.origin : file.location] = file;
+
+  //
+  // Add file references to alias.
+  //
+  file.aliases.forEach(function add(alias) {
+    if (!alias) return;
+
+    this.alias[alias] = file.location;
+  }, this);
+
+  this.asyncemit(&#x27;register&#x27;, file, function (error) {
+    if (error) return compiler.emit(&#x27;error&#x27;, error);
+    compiler.save(file);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Compiler.prototype.put = function put(filepath) {
+  var compiler = this;
+
+  compiler.process(filepath, function processed(error, code) {
+    if (error) return compiler.emit(&#x27;error&#x27;, error);
+
+    compiler.emit(&#x27;preprocessed&#x27;, filepath);
+    compiler.<span class="apidocCodeKeywordSpan">register</span>(new File(filepath, {
+      extname: compiler.type(filepath),
+      code: code
+    }));
+  });
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.resolve" id="apidoc.element.bigpipe.compiler.prototype.resolve">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>resolve
+        <span class="apidocSignatureSpan">(original)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolve(original) {
+  return this.alias[original] || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return assets.push(new File(dependency, {
+        extname: compiler.type(dependency),
+        dependency: true,
+        external: true
+      }));
+    }
+
+    dependency = compiler.<span class="apidocCodeKeywordSpan">resolve</span>(dependency);
+    if (!dependency) return;
+
+    assets.push(compiler.buffer[dependency]);
+  });
+});
+
+return assets;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.save" id="apidoc.element.bigpipe.compiler.prototype.save">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>save
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function save(file) {
+  var directory = path.resolve(this.dir)
+    , pathname = this.pathname;
+
+  fs.writeFileSync(path.join(directory, file.location), file.buffer);
+
+  this.list = fs.readdirSync(directory).reduce(function reduce(memo, file) {
+    if (path.extname(file)) {
+      memo[pathname + file] = path.resolve(directory, file);
+    }
+
+    return memo;
+  }, {});
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   if (!alias) return;
+
+   this.alias[alias] = file.location;
+ }, this);
+
+ this.asyncemit(&#x27;register&#x27;, file, function (error) {
+   if (error) return compiler.emit(&#x27;error&#x27;, error);
+   compiler.<span class="apidocCodeKeywordSpan">save</span>(file);
+ });
+};
+
+/**
+* Catalog the pages. As we&#x27;re not caching the file look ups, this method can be
+* called when a file changes so we will generate new.
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.serve" id="apidoc.element.bigpipe.compiler.prototype.serve">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>serve
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function serve(req, res) {
+  var file = (this._compiler || this).buffer[req.uri.pathname];
+
+  if (!file) return undefined;
+
+  res.setHeader(&#x27;Content-Type&#x27;, file.type);
+  res.setHeader(&#x27;Content-Length&#x27;, file.length);
+  res.end(file.buffer);
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.compiler.prototype.type" id="apidoc.element.bigpipe.compiler.prototype.type">
+        function <span class="apidocSignatureSpan">bigpipe.compiler.prototype.</span>type
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function type(filepath) {
+  var processor = this.processor(filepath);
+  return processor ? &#x27;.&#x27; + processor.export : path.extname(filepath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ var compiler = this;
+
+ compiler.process(filepath, function processed(error, code) {
+   if (error) return compiler.emit(&#x27;error&#x27;, error);
+
+   compiler.emit(&#x27;preprocessed&#x27;, filepath);
+   compiler.register(new File(filepath, {
+     extname: compiler.<span class="apidocCodeKeywordSpan">type</span>(filepath),
+     code: code
+   }));
+ });
+};
+
+/**
+* Read the file from disk and preprocess it depending on extension.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bigpipe.file" id="apidoc.module.bigpipe.file">module bigpipe.file</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file.file" id="apidoc.element.bigpipe.file.file">
+        function <span class="apidocSignatureSpan">bigpipe.</span>file
+        <span class="apidocSignatureSpan">(filepath, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function File(filepath, options) {
+  this.fuse();
+
+  options = options || {};
+  options.code = options.code || &#x27;&#x27;;
+  options.extname = options.extname || &#x27;.js&#x27;;
+  options.external = options.external || false;
+  options.dependency = options.dependency || false;
+
+  filepath = (filepath || &#x27;&#x27;).replace(path.extname(filepath), &#x27;&#x27;);
+
+  //
+  // Normalize aliasses. File can have multiple aliases, for example due to
+  // symlinked content. Aliases will be used by compiler.register
+  //
+  options.aliases = options.aliases || filepath;
+  options.aliases = Array.isArray(options.aliases)
+    ? options.aliases
+    : [ options.aliases ];
+
+  this.readable(&#x27;enumerable&#x27;, File.predefine(this, {
+    enumerable: true,
+    writable: true
+  }));
+
+  this.writable(&#x27;code&#x27;);                               // Actual code.
+  this.writable(&#x27;buffer&#x27;);                             // Buffer of code.
+  this.writable(&#x27;_events&#x27;);                            // EventEmitter 3.
+  this.writable(&#x27;aliases&#x27;, options.aliases);           // Absolute paths to source.
+
+  this.enumerable(&#x27;length&#x27;);                           // Buffer length.
+  this.enumerable(&#x27;hash&#x27;, null);                       // Hashed code representation.
+  this.enumerable(&#x27;pagelets&#x27;, []);                     // List of pagelets.
+  this.enumerable(&#x27;filepath&#x27;, filepath);               // Absolute path to file.
+  this.enumerable(&#x27;extname&#x27;, options.extname);         // File extension.
+  this.enumerable(&#x27;external&#x27;, options.external);       // File is hosted externally.
+
+  this.readable(&#x27;dependency&#x27;, options.dependency);     // File is page dependency.
+  this.readable(&#x27;type&#x27;, this.mime[this.extname]);      // The content-type.
+
+  //
+  // Process the content of the file if provided.
+  //
+  this.hash = this.encrypt(options.code);
+  this.set(options.code);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file.extend" id="apidoc.element.bigpipe.file.extend">
+        function <span class="apidocSignatureSpan">bigpipe.file.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(protoProps, staticProps) {
+  var parent = this
+    , child;
+
+  //
+  // The constructor function for the new subclass is either defined by you
+  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
+  // by us to simply call the parent&#x27;s constructor.
+  //
+  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+    child = protoProps.constructor;
+  } else {
+    child = mode(parent);
+  }
+
+  //
+  // Set the prototype chain to inherit from `parent`, without calling
+  // `parent`&#x27;s constructor function.
+  //
+  function Surrogate() {
+    this.constructor = child;
+  }
+
+  Surrogate.prototype = parent.prototype;
+  child.prototype = new Surrogate;
+
+  //
+  // Add prototype properties (instance properties) to the subclass,
+  // if supplied.
+  //
+  if (protoProps) mixin(child.prototype, protoProps);
+
+  //
+  // Add static properties to the constructor function, if supplied.
+  //
+  copypaste(child, parent, staticProps);
+
+  //
+  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  //
+  child.__super__ = parent.prototype;
+
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file.get" id="apidoc.element.bigpipe.file.get">
+        function <span class="apidocSignatureSpan">bigpipe.file.</span>get
+        <span class="apidocSignatureSpan">(method, getter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get(method, getter) {
+  Object.defineProperty(Base.prototype, method, {
+    configurable: false,
+    enumerable: false,
+    get: getter
+  });
+
+  return get;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+The first argument in the function call is port number you want the server to
+listen on. The second argument is an object with the configuration/options of the
+BigPipe server. The following options are supported:
+
+- **cache** A cache which is used for storing URL lookups. This cache instance
+  should have a `.<span class="apidocCodeKeywordSpan">get</span>(key)` and `.set(key, value)` method. Defaults to `false`
+- **dist** The location of our folder where we can store our compiled CSS and
+  JavaScript to disk. If the path or folder does not exist it will be
+  automatically created. Defaults to `working dir/dist`.
+- **pagelets** A directory that contains your Pagelet definitions or an array of Pagelet
+  constructors. Defaults to `working dir/pagelets`. If you don&#x27;t provide Pages it
+  will serve a 404 page for every request.
+- **parser** The message parser we should use for our real-time communication.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file.predefine" id="apidoc.element.bigpipe.file.predefine">
+        function <span class="apidocSignatureSpan">bigpipe.file.</span>predefine
+        <span class="apidocSignatureSpan">(obj, pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefine(obj, pattern) {
+  pattern = pattern || predefine.READABLE;
+
+  return function predefined(method, description, clean) {
+    //
+    // If we are given a description compatible Object, use that instead of
+    // setting it as value. This allows easy creation of getters and setters.
+    //
+    if (
+         !predefine.descriptor(description)
+      || is(description, &#x27;object&#x27;)
+         &#x26;&#x26; !clean
+         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    ) { description = {
+        value: description
+      };
+    }
+
+    //
+    // Prevent thrown errors when we attempt to override a readonly
+    // property
+    //
+    var described = Object.getOwnPropertyDescriptor(obj, method);
+    if (described &#x26;&#x26; !described.configurable) {
+      return predefined;
+    }
+
+    Object.defineProperty(obj, method, !clean
+      ? predefine.mixin({}, pattern, description)
+      : description
+    );
+
+    return predefined;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// symlinked content. Aliases will be used by compiler.register
+//
+options.aliases = options.aliases || filepath;
+options.aliases = Array.isArray(options.aliases)
+  ? options.aliases
+  : [ options.aliases ];
+
+this.readable(&#x27;enumerable&#x27;, File.<span class="apidocCodeKeywordSpan">predefine</span>(this, {
+  enumerable: true,
+  writable: true
+}));
+
+this.writable(&#x27;code&#x27;);                               // Actual code.
+this.writable(&#x27;buffer&#x27;);                             // Buffer of code.
+this.writable(&#x27;_events&#x27;);                            // EventEmitter 3.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file.readable" id="apidoc.element.bigpipe.file.readable">
+        function <span class="apidocSignatureSpan">bigpipe.file.</span>readable
+        <span class="apidocSignatureSpan">(method, description, clean)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefined(method, description, clean) {
+  //
+  // If we are given a description compatible Object, use that instead of
+  // setting it as value. This allows easy creation of getters and setters.
+  //
+  if (
+       !predefine.descriptor(description)
+    || is(description, &#x27;object&#x27;)
+       &#x26;&#x26; !clean
+       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+  ) { description = {
+      value: description
+    };
+  }
+
+  //
+  // Prevent thrown errors when we attempt to override a readonly
+  // property
+  //
+  var described = Object.getOwnPropertyDescriptor(obj, method);
+  if (described &#x26;&#x26; !described.configurable) {
+    return predefined;
+  }
+
+  Object.defineProperty(obj, method, !clean
+    ? predefine.mixin({}, pattern, description)
+    : description
+  );
+
+  return predefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Initialize various things of BigPipe.
+ *
+ * @param {Object} options Optional options.
+ * @returns {BigPipe} Fluent interface.
+ * @api private
+ */
+BigPipe.<span class="apidocCodeKeywordSpan">readable</span>(&#x27;initialize&#x27;, function initialize(options) {
+//
+// Add our default middleware layers, this needs to be done before we
+// initialize or add plugins as we want to make sure that OUR middleware is
+// loaded first as it&#x27;s the most important (at least, in our opinion).
+//
+this.middleware.use(&#x27;defaults&#x27;, require(&#x27;./middleware/defaults&#x27;));
+this.middleware.use(&#x27;zipline&#x27;, this._zipline.middleware());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file.set" id="apidoc.element.bigpipe.file.set">
+        function <span class="apidocSignatureSpan">bigpipe.file.</span>set
+        <span class="apidocSignatureSpan">(method, getter, setter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(method, getter, setter) {
+  Object.defineProperty(Base.prototype, method, {
+    configurable: false,
+    enumerable: false,
+    get: getter,
+    set: setter
+  });
+
+  return set;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+The first argument in the function call is port number you want the server to
+listen on. The second argument is an object with the configuration/options of the
+BigPipe server. The following options are supported:
+
+- **cache** A cache which is used for storing URL lookups. This cache instance
+  should have a `.get(key)` and `.<span class="apidocCodeKeywordSpan">set</span>(key, value)` method. Defaults to `false`
+- **dist** The location of our folder where we can store our compiled CSS and
+  JavaScript to disk. If the path or folder does not exist it will be
+  automatically created. Defaults to `working dir/dist`.
+- **pagelets** A directory that contains your Pagelet definitions or an array of Pagelet
+  constructors. Defaults to `working dir/pagelets`. If you don&#x27;t provide Pages it
+  will serve a 404 page for every request.
+- **parser** The message parser we should use for our real-time communication.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.file.writable" id="apidoc.element.bigpipe.file.writable">
+        function <span class="apidocSignatureSpan">bigpipe.file.</span>writable
+        <span class="apidocSignatureSpan">(method, description, clean)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefined(method, description, clean) {
+  //
+  // If we are given a description compatible Object, use that instead of
+  // setting it as value. This allows easy creation of getters and setters.
+  //
+  if (
+       !predefine.descriptor(description)
+    || is(description, &#x27;object&#x27;)
+       &#x26;&#x26; !clean
+       &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+  ) { description = {
+      value: description
+    };
+  }
+
+  //
+  // Prevent thrown errors when we attempt to override a readonly
+  // property
+  //
+  var described = Object.getOwnPropertyDescriptor(obj, method);
+  if (described &#x26;&#x26; !described.configurable) {
+    return predefined;
+  }
+
+  Object.defineProperty(obj, method, !clean
+    ? predefine.mixin({}, pattern, description)
+    : description
+  );
+
+  return predefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.readable(&#x27;stack&#x27;, []);
+
+  //
+  // Only use the toString of options if it was explicitly provided, otherwise
+  // this would default to the toString of the options object.
+  //
+  if (options.hasOwnProperty(&#x27;toString&#x27;)) {
+    this.<span class="apidocCodeKeywordSpan">writable</span>(&#x27;_toString&#x27;, options.toString);
+  }
+
+  this.concat(options.files);
+}
+
+//
+// Fuse collection with extendible.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bigpipe.predefine" id="apidoc.module.bigpipe.predefine">module bigpipe.predefine</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.predefine" id="apidoc.element.bigpipe.predefine.predefine">
+        function <span class="apidocSignatureSpan">bigpipe.</span>predefine
+        <span class="apidocSignatureSpan">(obj, pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function predefine(obj, pattern) {
+  pattern = pattern || predefine.READABLE;
+
+  return function predefined(method, description, clean) {
+    //
+    // If we are given a description compatible Object, use that instead of
+    // setting it as value. This allows easy creation of getters and setters.
+    //
+    if (
+         !predefine.descriptor(description)
+      || is(description, &#x27;object&#x27;)
+         &#x26;&#x26; !clean
+         &#x26;&#x26; !predefine.descriptor(predefine.mixin({}, pattern, description))
+    ) { description = {
+        value: description
+      };
+    }
+
+    //
+    // Prevent thrown errors when we attempt to override a readonly
+    // property
+    //
+    var described = Object.getOwnPropertyDescriptor(obj, method);
+    if (described &#x26;&#x26; !described.configurable) {
+      return predefined;
+    }
+
+    Object.defineProperty(obj, method, !clean
+      ? predefine.mixin({}, pattern, description)
+      : description
+    );
+
+    return predefined;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// symlinked content. Aliases will be used by compiler.register
+//
+options.aliases = options.aliases || filepath;
+options.aliases = Array.isArray(options.aliases)
+  ? options.aliases
+  : [ options.aliases ];
+
+this.readable(&#x27;enumerable&#x27;, File.<span class="apidocCodeKeywordSpan">predefine</span>(this, {
+  enumerable: true,
+  writable: true
+}));
+
+this.writable(&#x27;code&#x27;);                               // Actual code.
+this.writable(&#x27;buffer&#x27;);                             // Buffer of code.
+this.writable(&#x27;_events&#x27;);                            // EventEmitter 3.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.create" id="apidoc.element.bigpipe.predefine.create">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>create
+        <span class="apidocSignatureSpan">(property, description, pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(property, description, pattern) {
+  pattern = pattern || {};
+
+  if (!predefine.descriptor(description)) description = {
+    enumberable: false,
+    value: description
+  };
+
+  var definition = {};
+  definition[property] = predefine.mixin(pattern, description);
+
+  return definition;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+options = configure(options || {});
+
+this._pagelets = [];                           // Stores our pagelets.
+this._server = server;                         // HTTP server we work with.
+this._options = options;                       // Configure options.
+this._temper = new Temper;                     // Template parser.
+this._plugins = Object.<span class="apidocCodeKeywordSpan">create</span>(null);           // Plugin storage.
+this._cache = options(&#x27;cache&#x27;, false);         // Enable URL lookup caching.
+this._statusCodes = Object.create(null);       // Stores error pagelets.
+this._zipline = new Zipline(options);          // Improved gzip compression.
+
+//
+// Setup the asset compiler before pagelets are discovered as they will
+// need to hook in to the compiler to register all assets that are loaded.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.descriptor" id="apidoc.element.bigpipe.predefine.descriptor">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>descriptor
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function descriptor(obj) {
+  if (!obj || &#x27;object&#x27; !== typeof obj || Array.isArray(obj)) return false;
+
+  var keys = Object.keys(obj);
+
+  //
+  // A descriptor can only be a data or accessor descriptor, never both.
+  // An data descriptor can only specify:
+  //
+  // - configurable
+  // - enumerable
+  // - (optional) value
+  // - (optional) writable
+  //
+  // And an accessor descriptor can only specify;
+  //
+  // - configurable
+  // - enumerable
+  // - (optional) get
+  // - (optional) set
+  //
+  if (
+       (&#x27;value&#x27; in obj || &#x27;writable&#x27; in obj)
+    &#x26;&#x26; (&#x27;function&#x27; === typeof obj.set || &#x27;function&#x27; === typeof obj.get)
+  ) return false;
+
+  return !!keys.length &#x26;&#x26; keys.every(function allowed(key) {
+    var type = description[key]
+      , valid = type === undefined || is(obj[key], type);
+
+    return key in description &#x26;&#x26; valid;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.each" id="apidoc.element.bigpipe.predefine.each">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>each
+        <span class="apidocSignatureSpan">(collection, iterator, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(collection, iterator, context) {
+  if (arguments.length === 1) {
+    iterator = collection;
+    collection = this;
+  }
+
+  var isArray = Array.isArray(collection || this)
+    , length = collection.length
+    , i = 0
+    , value;
+
+  if (context) {
+    if (isArray) {
+      for (; i &#x3c; length; i++) {
+        value = iterator.apply(collection[ i ], context);
+        if (value === false) break;
+      }
+    } else {
+      for (i in collection) {
+        value = iterator.apply(collection[ i ], context);
+        if (value === false) break;
+      }
+    }
+  } else {
+    if (isArray) {
+      for (; i &#x3c; length; i++) {
+        value = iterator.call(collection[i], i, collection[i]);
+        if (value === false) break;
+      }
+    } else {
+      for (i in collection) {
+        value = iterator.call(collection[i], i, collection[i]);
+        if (value === false) break;
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Response} res HTTP response.
+ * @returns {BigPipe} fluent interface
+ * @api private
+ */
+BigPipe.readable(&#x27;dispatch&#x27;, function dispatch(req, res) {
+  var bigpipe = this;
+
+  return this.middleware.<span class="apidocCodeKeywordSpan">each</span>(req, res, function next(error, early) {
+    if (error) return bigpipe.status({ _req: req, _res: res}, 500, error, true);
+    if (early) return debug(&#x27;request was handled by a middleware layer&#x27;);
+
+    bigpipe.router(req, res);
+  });
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.extend" id="apidoc.element.bigpipe.predefine.extend">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(protoProps, staticProps) {
+  var parent = this
+    , child;
+
+  //
+  // The constructor function for the new subclass is either defined by you
+  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
+  // by us to simply call the parent&#x27;s constructor.
+  //
+  if (protoProps &#x26;&#x26; has.call(protoProps, &#x27;constructor&#x27;)) {
+    child = protoProps.constructor;
+  } else {
+    child = mode(parent);
+  }
+
+  //
+  // Set the prototype chain to inherit from `parent`, without calling
+  // `parent`&#x27;s constructor function.
+  //
+  function Surrogate() {
+    this.constructor = child;
+  }
+
+  Surrogate.prototype = parent.prototype;
+  child.prototype = new Surrogate;
+
+  //
+  // Add prototype properties (instance properties) to the subclass,
+  // if supplied.
+  //
+  if (protoProps) mixin(child.prototype, protoProps);
+
+  //
+  // Add static properties to the constructor function, if supplied.
+  //
+  copypaste(child, parent, staticProps);
+
+  //
+  // Set a convenience property in case the parent&#x27;s prototype is needed later.
+  //
+  child.__super__ = parent.prototype;
+
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.lazy" id="apidoc.element.bigpipe.predefine.lazy">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>lazy
+        <span class="apidocSignatureSpan">(obj, prop, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lazy(obj, prop, fn) {
+  Object.defineProperty(obj, prop, {
+    configurable: true,
+
+    get: function get() {
+      return Object.defineProperty(this, prop, {
+        value: fn.call(this)
+      })[prop];
+    },
+
+    set: function set(value) {
+      return Object.defineProperty(this, prop, {
+        value: value
+      })[prop];
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.merge" id="apidoc.element.bigpipe.predefine.merge">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>merge
+        <span class="apidocSignatureSpan">(target, additional)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function merge(target, additional) {
+  var result = target
+    , undefined;
+
+  if (Array.isArray(target)) {
+    each(additional, function arrayForEach(index) {
+      if (JSON.stringify(target).indexOf(JSON.stringify(additional[index])) === -1) {
+        result.push(additional[index]);
+      }
+    });
+  } else if (&#x27;object&#x27; === typeof target) {
+    each(additional, function objectForEach(key, value) {
+      if (target[key] === undefined) {
+        result[key] = value;
+      } else {
+        result[key] = merge(target[key], additional[key]);
+      }
+    });
+  } else {
+    result = additional;
+  }
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   return obj[key];
+ }
+
+ //
+ // Allow new options to be be merged in against the original object.
+ //
+ get.merge = function merge(properties) {
+   return BigPipe.predefine.<span class="apidocCodeKeywordSpan">merge</span>(obj, properties);
+ };
+
+ return get;
+}
+
+/**
+* Our pagelet management.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.mixin" id="apidoc.element.bigpipe.predefine.mixin">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>mixin
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mixin(target) {
+  Array.prototype.slice.call(arguments, 1).forEach(function forEach(o) {
+    Object.getOwnPropertyNames(o).forEach(function eachAttr(attr) {
+      Object.defineProperty(target, attr, Object.getOwnPropertyDescriptor(o, attr));
+    });
+  });
+
+  return target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bigpipe.predefine.remove" id="apidoc.element.bigpipe.predefine.remove">
+        function <span class="apidocSignatureSpan">bigpipe.predefine.</span>remove
+        <span class="apidocSignatureSpan">(obj, keep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remove(obj, keep) {
+  if (!obj) return false;
+  keep = keep || [];
+
+  for (var prop in obj) {
+    if (has.call(obj, prop) &#x26;&#x26; !~keep.indexOf(prop)) {
+      delete obj[prop];
+    }
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+**BigPipe**
+- [Getting started](#getting-started)
+- [BigPipe.createServer()](#bigpipecreateserver)
+- [new BigPipe()](#new-bigpipe)
+- [BigPipe.version](#bigpipeversion)
+- [BigPipe.define()](#bigpipedefine)
+- [BigPipe.before()](#bigpipebefore)
+- [BigPipe.<span class="apidocCodeKeywordSpan">remove</span>()](#bigpiperemove)
+- [BigPipe.disable()](#bigpipedisable)
+- [BigPipe.enable()](#bigpipeenable)
+- [BigPipe.use()](#bigpipeuse)
+
+### Getting started
+
+In all of these example we assume that your file is setup as:
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
